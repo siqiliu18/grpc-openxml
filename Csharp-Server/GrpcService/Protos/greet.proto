@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package grpcservicepk;
+
+service GrpcService {
+  rpc ServerFunc (ServerFuncRequest) returns (ServerFuncReply);
+}
+
+message ServerFuncRequest {
+  string name = 1;
+}
+
+message ServerFuncReply {
+  string message = 1;
+}
